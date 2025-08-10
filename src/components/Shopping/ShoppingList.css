@@ -1,0 +1,29 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.buy-btn {
+    background-color: #0a84ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buy-btn:hover {
+    background-color: #006bd6;
+}

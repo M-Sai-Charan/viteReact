@@ -1,0 +1,127 @@
+.cart-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* a bit darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    /* subtle blur behind dialog */
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.cart-dialog-content {
+    background: #fff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: slideIn 0.3s ease forwards;
+    position: relative;
+}
+
+/* Scrollbar for WebKit browsers */
+.cart-dialog-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cart-dialog-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cart-dialog-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    /* to create padding effect */
+}
+
+/* Button inside dialog styling */
+.cart-dialog-content>button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #f44336;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.cart-container>button {
+    background: #2563eb;
+    /* Blue-600 */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.cart-container>button:hover {
+    background: #1e40af;
+    /* Blue-800 */
+    box-shadow: 0 6px 12px rgba(30, 64, 175, 0.6);
+}
+
+.cart-container>button:active {
+    background: #1e3a8a;
+    /* Blue-900 */
+    box-shadow: 0 2px 6px rgba(30, 58, 138, 0.8);
+}
+
+.cart-container>button:focus {
+    outline: 3px solid #93c5fd;
+    /* Blue-300 outline */
+    outline-offset: 2px;
+}
+
+.cart-dialog-content>button:hover {
+    background: #d32f2f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,21 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-body {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: calc(100vh - 60px); /* full height minus header */
+}

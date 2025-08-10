@@ -1,0 +1,33 @@
+.header {
+  height: 60px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.header__logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.header__user {
+  font-size: 1rem;
+}
+.header__logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #f44336;
+  transition: color 0.2s ease;
+}
+
+.header__logout-btn:hover {
+  color: #b71c1c;
+  background-color: transparent;
+}
