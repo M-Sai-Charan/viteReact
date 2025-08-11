@@ -5,6 +5,7 @@ const MainContent = lazy(() => import('./components/MainContent'));
 const ToDoApp = lazy(() => import('./components/To-Do-App/ToDoApp'));
 const Shopping = lazy(() => import('./components/Shopping/Shopping'));
 const Weather = lazy(() => import('./components/Weather/Weather'));
+const Recipes = lazy(() => import('./components/Recipes/Recipes'));
 const Loading = () => <div>Loading...</div>;
 
 export default function AppRouter() {
@@ -21,6 +22,9 @@ export default function AppRouter() {
           </Route>
            <Route path="/weather/*" element={<MainContent/>}>
             <Route index element={<Weather />} />
+          </Route>
+           <Route path="/recipes/*" element={<MainContent/>}>
+            <Route index element={<Recipes />} />
           </Route>
         </Routes>
       </Suspense>

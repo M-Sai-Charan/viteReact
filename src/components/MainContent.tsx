@@ -7,7 +7,8 @@ import './MainContent.css';
 const todoMenuItems = [
     { label: 'To-Do App', path: 'todo' },
     { label: 'Shopping App', path: 'shopping' },
-    { label: 'Weather App', path: 'weather' }
+    { label: 'Weather App', path: 'weather' },
+    { label: 'Recipes App', path: 'recipes' },
 ];
 
 const MainContent: React.FC = () => {

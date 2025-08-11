@@ -1,0 +1,29 @@
+.recipe-input-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.recipe-input-form input {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.recipe-input-form button {
+  padding: 10px 16px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 600px) {
+  .recipe-input-form input {
+    width: 70%;
+  }
+}
