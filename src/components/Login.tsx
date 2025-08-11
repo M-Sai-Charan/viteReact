@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Login() {
     const navigate = useNavigate();
+    const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -61,6 +63,7 @@ export default function Login() {
             setPasswordError('Password must be at least 6 characters long.');
             return;
         }
+        login();
         localStorage.setItem('username', username);
         localStorage.setItem('email', email);
         navigate('/todo')
